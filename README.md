@@ -8,8 +8,3 @@ The rules are:
 
 These are the two most common rules that are being broken, so I figured we should focus on them as the MVP.
 
-
-There's a 70% chance that this won't even be used at work lol.
-
-
-Can't say I didn't try tho.

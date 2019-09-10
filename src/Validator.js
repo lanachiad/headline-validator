@@ -21,6 +21,7 @@ class Validator extends Component {
 		const branded = this.testBranded(text);
 		const tooLong = this.testLength(text);
 		this.isItAcceptable(branded, tooLong);
+		this.updateState(text, tooLong, branded);
 	}
 
 	testBranded = text => {
@@ -63,14 +64,26 @@ class Validator extends Component {
 		}
 	}
 
+	updateState = (headline, brandedBoolean, lengthBoolean) => {
+		this.setState({
+			headlineInput: headline,
+			headlineBranded: brandedBoolean,
+			headlineLength: lengthBoolean
+		});
+	}
+
 	render() {
 		return (
-			<form onSubmit={this.createHeadline}>
-				<input id="headlineInput" type="text" placeholder="Insert Headline Copy Here" />
-				<button value="Check">
-					Check
-				</button>
-			</form>
+			<div>
+				<form onSubmit={this.createHeadline}>
+					<input id="headlineInput" type="text" placeholder="Insert Headline Copy Here" />
+					<button value="Check">
+						Check
+					</button>
+				</form>
+
+				<Result text={this.state.headlineInput} branded={this.state.headlineBranded} length={this.state.headlineLength} />
+			</div>
 		)
 	}
 

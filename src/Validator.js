@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Result from './Result';
 
 class Validator extends Component {
 	createHeadline = e => {

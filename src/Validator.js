@@ -16,9 +16,8 @@ class Validator extends Component {
 
 	checkHeadline = text => {
 		const branded = this.testBranded(text);
-		console.log(branded);
 		const tooLong = this.testLength(text);
-		console.log(tooLong);
+		this.isItAcceptable(branded, tooLong);
 	}
 
 	testBranded = text => {
@@ -49,6 +48,16 @@ class Validator extends Component {
          return false;
          // False = Equal to or less
       }
+	}
+
+	isItAcceptable = (brandedBoolean, lengthBoolean) => {
+		if (brandedBoolean === true) {
+			console.log('this bitch is branded');
+		}
+
+		if (lengthBoolean === true) {
+			console.log('this bitch is too long');
+		}
 	}
 
 	render() {

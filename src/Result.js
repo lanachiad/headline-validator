@@ -10,7 +10,12 @@ class Result extends Component {
 
 	render() {
 		return (
-			<h2>test</h2>
+			<div>
+				<h2>Headline: {this.props.text}</h2>
+				<p>Is it too long? {this.props.length}</p>
+				<p>Is it branded? {this.props.branded}</p>
+			</div>
+
 
 			// This will handle what result message will come up to the user based on the headline validator's results
 			// So if this is branded, it will let the user know that there's branded language in their input

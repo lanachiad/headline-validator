@@ -21,7 +21,7 @@ class Validator extends Component {
 		const branded = this.testBranded(text);
 		const tooLong = this.testLength(text);
 		this.isItAcceptable(branded, tooLong);
-		this.updateState(text, tooLong, branded);
+		this.updateState(text, branded, tooLong);
 	}
 
 	testBranded = text => {

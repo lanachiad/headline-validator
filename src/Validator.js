@@ -2,6 +2,15 @@ import React, {Component} from 'react';
 import Result from './Result';
 
 class Validator extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			headlineInput: '',
+			headlineBranded: null,
+			headlineLength: null;
+		}
+	}
+
 	createHeadline = e => {
 		e.preventDefault();
 		const headlineCopy = e.target.headlineInput.value;

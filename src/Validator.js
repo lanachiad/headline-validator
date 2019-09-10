@@ -7,7 +7,7 @@ class Validator extends Component {
 		this.state = {
 			headlineInput: '',
 			headlineBranded: null,
-			headlineLength: null;
+			headlineLength: null
 		}
 	}
 

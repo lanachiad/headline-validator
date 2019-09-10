@@ -1,13 +1,6 @@
 import React, {Component} from 'react';
 
 class Validator extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			currentHeadline: ''
-		}
-	}
-	
 	createHeadline = e => {
 		e.preventDefault();
 		const headlineCopy = e.target.headlineInput.value;
